@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("https://github.com/Slizaaaaard/Portfolio/tree/master/dist/img/IMG_20190117_162540.jpg");
+      background: url("../img/IMG_20190117_162540.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
