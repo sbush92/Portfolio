@@ -40,7 +40,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -62,7 +61,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -75,7 +74,7 @@
 
   // Branding Side
   &-branding {
-    background: $primary-color;
+    background: rgba($primary-color, 0.9);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
@@ -83,15 +82,14 @@
       // Slide in from bottom
       transform: translate3d(0, 0, 0);
     }
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px $secondary-color;
-    }
   }
-
+  .portrait {
+    width: 250px;
+    height: 250px;
+    background: url("../img/portrait.jpg");
+    border-radius: 50%;
+    border: solid 3px $secondary-color;
+  }
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;

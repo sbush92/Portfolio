@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,24 +39,24 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: rgba(55, 55, 55, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: rgba(68, 68, 68, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px #eece1a; }
+  .menu .portrait {
+    width: 250px;
+    height: 250px;
+    background: url("../img/portrait.jpg");
+    border-radius: 50%;
+    border: solid 3px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -98,6 +97,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
+  padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
@@ -111,6 +111,45 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
+  body#bg-img2 {
+    background: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img2:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
+  body#bg-img3 {
+    background: url("../img/background3.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img3:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
+  body#bg-img4 {
+    background: url("../img/background4.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img4:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
 

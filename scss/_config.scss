@@ -2,6 +2,9 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url("../img/background.jpg");
+$about-image: url("../img/background2.jpg");
+$contact-image: url("../img/background3.jpg");
+$work-image: url("../img/background4.jpg");
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -22,6 +25,69 @@ $background-opacity: 0.9;
         right: 0;
         width: 100%;
         height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+@mixin background2 {
+  @if $show-home-image {
+    &#bg-img2 {
+      background: $about-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+@mixin background3 {
+  @if $show-home-image {
+    &#bg-img3 {
+      background: $contact-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+@mixin background4 {
+  @if $show-home-image {
+    &#bg-img4 {
+      background: $work-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
         z-index: -1;
         background: rgba($primary-color, $background-opacity);
       }
