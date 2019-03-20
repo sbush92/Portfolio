@@ -113,6 +113,19 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
+  body#bg-img2 {
+    background: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img2:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
 
 h1,
 h2,
