@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbush92/Portfolio.git"
+  },
+  "author": "sjbush92@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbush92/Portfolio/issues"
+  },
+  "homepage": "https://github.com/sbush92/Portfolio#readme"
+}
