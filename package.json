@@ -4,7 +4,10 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\"",
+    "test": "mocha e2e-spec.js",
+    "ci": "start-server-and-test http://localhost:8080"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/sbush92/Portfolio/issues"
   },
-  "homepage": "https://github.com/sbush92/Portfolio#readme"
+  "homepage": "https://github.com/sbush92/Portfolio#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.3"
+  },
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
 }
