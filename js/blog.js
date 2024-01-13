@@ -56,13 +56,11 @@ function generateBlogPosts() {
   blogPostsContainer.innerHTML = "";
 
   // Loop through blogPostsData and create HTML for each post
-  blogPostsData.forEach((post, index) => {
+  blogData.forEach((post, index) => {
     const postHTML = `
-        <div class="blog-post">
+        <div class="post post-${index}">
           <h5>${post.title}</h5>
-          <div class="intro">
             <p>${post.content}</p>
-          </div>
         </div>
       `;
 

@@ -280,34 +280,33 @@ main#home h1 {
   border-bottom: #eece1a 5px solid;
 }
 
-.blog {
+.blog-posts {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "blogimage intro intro"
-    "post1 post2 post3";
+    "post0 post1 post2"
+    "post3 post4 post5";
   grid-template-columns: repeat(3, 1fr);
 }
-.blog-post .blog-image {
-  grid-area: blogimage;
-  margin: auto;
-  border-radius: 50%;
-  border: #eece1a 3px solid;
+.blog-posts .post-0 {
+  grid-area: post0;
 }
-.blog-post .intro {
-  grid-area: intro;
-  font-size: 1.5rem;
-}
-.blog-post .post-1 {
+.blog-posts .post-1 {
   grid-area: post1;
 }
-.blog-post .post-2 {
+.blog-posts .post-2 {
   grid-area: post2;
 }
-.blog-post .post-3 {
+.blog-posts .post-3 {
   grid-area: post3;
 }
-.blog-post .post {
+.blog-posts .post-4 {
+  grid-area: post4;
+}
+.blog-posts .post-5 {
+  grid-area: post5;
+}
+.blog-posts .post {
   background: #515151;
   padding: 0.5rem;
   border-bottom: #eece1a 5px solid;
