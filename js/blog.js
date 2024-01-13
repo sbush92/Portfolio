@@ -1,3 +1,4 @@
+const postsPerPage = 6;
 const blogData = [
   {
     title: "The Genesis: Why Start a Blog?",
@@ -24,8 +25,6 @@ const blogData = [
     content:
       "As I pen down these thoughts, I'm filled with a sense of anticipation and optimism. This is not just my first blog post—it's a declaration of a new chapter, a commitment to sharing, learning, and building connections in the vast landscape of the blogosphere. Here's to many more posts, discoveries, and shared moments on this exciting journey. Thank you for joining me, and I look forward to the adventures that lie ahead!",
   },
-];
-const blogDataMachineLearning = [
   {
     title: "Finished with Identifying Irises!",
     content:
@@ -47,6 +46,7 @@ const blogDataMachineLearning = [
       "The relevance of sales forecasting cannot be overstated. Businesses rely on these predictions to make informed decisions, optimize inventory management, and adapt to changing market dynamics. As technology evolves, so do the tools at our disposal, with machine learning emerging as a powerful ally in enhancing the accuracy and efficiency of sales forecasts. So, buckle up for this new adventure! From identifying irises to navigating the intricate landscape of sales forecasting, each project contributes to my growth as a data enthusiast. I'm excited to delve into the complexities of this sales forecasting challenge, armed with the knowledge gained from simpler projects and the powerful capabilities of machine learning tools. Stay tuned for updates on the progress of this project, and as always, feel free to share your insights or embark on this learning journey with me.",
   },
 ];
+const blogDataMachineLearning = [];
 
 // Function to generate blog posts
 function generateBlogPosts() {
@@ -76,11 +76,18 @@ function generatePagination() {
   // Clear existing content
   paginationContainer.innerHTML = "";
 
-  // Dummy total number of pages (replace with actual logic)
-  const totalPages = 3;
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(blogData.length / postsPerPage);
+
+  // Create first page
+  const pageLink = document.createElement("a");
+  pageLink.href = `blog.html`;
+  pageLink.textContent = 1;
+  pageLink.addEventListener("click", () => displayBlogPosts(1));
+  paginationContainer.appendChild(pageLink);
 
   // Generate pagination links dynamically
-  for (let i = 1; i <= totalPages; i++) {
+  for (let i = 2; i <= totalPages; i++) {
     const pageLink = document.createElement("a");
     pageLink.href = `blog-page-${i}.html`;
     pageLink.textContent = i;
