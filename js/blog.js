@@ -49,24 +49,28 @@ const blogData = [
 const blogDataMachineLearning = [];
 
 // Function to generate blog posts
-function generateBlogPosts() {
+function generateBlogPosts(pageNumber) {
   const blogPostsContainer = document.getElementById("blog-posts");
 
   // Clear existing content
   blogPostsContainer.innerHTML = "";
 
-  // Loop through blogPostsData and create HTML for each post
-  blogData.forEach((post, index) => {
-    const postHTML = `
-        <div class="post post-${index}">
-          <h5>${post.title}</h5>
-            <p>${post.content}</p>
-        </div>
-      `;
+  // Calculate the start and end index for the current page
+  const startIndex = (pageNumber - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
 
+  // Loop through the blogData and create HTML for each post within the current page
+  for (let i = startIndex; i < endIndex && i < blogData.length; i++) {
+    const post = blogData[i];
+    const postHTML = `
+      <div class="post post-${i}">
+        <h5>${post.title}</h5>
+        <p>${post.content}</p>
+      </div>
+    `;
     // Append postHTML to blogPostsContainer
     blogPostsContainer.innerHTML += postHTML;
-  });
+  }
 }
 
 // Function to generate pagination
@@ -79,17 +83,10 @@ function generatePagination() {
   // Calculate the total number of pages
   const totalPages = Math.ceil(blogData.length / postsPerPage);
 
-  // Create first page
-  const pageLink = document.createElement("a");
-  pageLink.href = `blog.html`;
-  pageLink.textContent = 1;
-  pageLink.addEventListener("click", () => displayBlogPosts(1));
-  paginationContainer.appendChild(pageLink);
-
   // Generate pagination links dynamically
-  for (let i = 2; i <= totalPages; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     const pageLink = document.createElement("a");
-    pageLink.href = `blog-page-${i}.html`;
+    pageLink.href = `blog.html?page=${i}`;
     pageLink.textContent = i;
     pageLink.addEventListener("click", () => displayBlogPosts(i));
     paginationContainer.appendChild(pageLink);
@@ -98,10 +95,17 @@ function generatePagination() {
 
 // Function to display blog posts based on page number
 function displayBlogPosts(pageNumber) {
-  // Your logic to fetch and display specific blog posts based on pageNumber
-  console.log(`Displaying blog posts for page ${pageNumber}`);
+  // Update the URL to reflect the current page
+  history.pushState(null, null, `blog.html?page=${pageNumber}`);
+  
+  // Generate and display blog posts for the given page
+  generateBlogPosts(pageNumber);
 }
 
-// Initial setup: Generate blog posts and pagination
-generateBlogPosts();
+// Initial setup: Get the page number from the URL or default to page 1
+const urlParams = new URLSearchParams(window.location.search);
+const initialPage = parseInt(urlParams.get('page')) || 1;
+
+// Generate blog posts and pagination for the initial page
+generateBlogPosts(initialPage);
 generatePagination();
