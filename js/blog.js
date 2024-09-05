@@ -54,6 +54,7 @@ const blogData = [
     title: "Time to renew my CompTIA certs again",
     content:
       "This time I'm diving into Linux Plus! I've been working with Linux for a few years now, but I have to say, I wish I had taken this certification sooner. It's been an eye-opener to learn some of the neat tips and tricks that I hadn't come across before. I'm excited to see where this certification will take me in my career.",
+  },
 ];
 const blogDataMachineLearning = [];
 
