@@ -50,6 +50,10 @@ const blogData = [
     content:
       "As the tech industry continues to evolve and shape our world, there's an exciting buzz in the air as Utah Tech Week approaches. From groundbreaking innovations to collaborative networking opportunities, this event promises to be a hub for tech enthusiasts, professionals, and curious minds alike. As someone who is passionate about technology, I can't wait to attend Utah Tech Week and immerse myself in the dynamic and ever-evolving tech landscape.",
   },
+  {
+    title: "Time to renew my CompTIA certs again",
+    content:
+      "This time I'm diving into Linux Plus! I've been working with Linux for a few years now, but I have to say, I wish I had taken this certification sooner. It's been an eye-opener to learn some of the neat tips and tricks that I hadn't come across before. I'm excited to see where this certification will take me in my career.",
 ];
 const blogDataMachineLearning = [];
 
