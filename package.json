@@ -28,6 +28,6 @@
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
     "mocha": "^10.2.0",
-    "npm": "^10.2.5"
+    "npm": "^10.8.3"
   }
 }
