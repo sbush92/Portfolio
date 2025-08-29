@@ -1,0 +1,36 @@
+name: create release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release_binary_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build binary
+        run: npm run build
+
+      - name: Upload release binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-binary
+          path: ./dist
+
