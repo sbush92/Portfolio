@@ -22,7 +22,7 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "http-server": "^14.1.1",
-    "start-server-and-test": "^2.0.3"
+    "start-server-and-test": "^2.0.13"
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
