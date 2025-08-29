@@ -1,9 +1,7 @@
 /* eslint-env node, mocha */
 /* eslint-disable @typescript-eslint/no-require-imports */
-describe('Sample Test Suite', function() {
 const assert = require('assert');
 const { JSDOM } = require('jsdom');
-
 describe('Portfolio Project Tests', function() {
   describe('Menu Toggle', function() {
     it('should toggle menu classes on click', function() {
@@ -57,4 +55,3 @@ describe('Portfolio Project Tests', function() {
     });
   });
 });
-})
