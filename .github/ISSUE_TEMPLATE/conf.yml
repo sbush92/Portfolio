@@ -2,9 +2,9 @@ name: Portfolio Bug Report
 description: Report a bug or issue with the Portfolio website or blog.
 title: "[Bug]: "
 labels: ["bug", "triage"]
- projects: ["sbush92/Portfolio"]
- assignees:
-   - sbush92
+projects: ["sbush92/Portfolio"]
+assignees:
+  - sbush92
 body:
   - type: markdown
     attributes:
