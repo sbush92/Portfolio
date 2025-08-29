@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/sbush92/Portfolio#readme",
   "devDependencies": {
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.2.1",
     "http-server": "^14.1.1",
-    "start-server-and-test": "^2.0.3"
+    "start-server-and-test": "^2.0.13"
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
-    "mocha": "^10.8.2",
-    "npm": "^10.8.3"
+    "mocha": "^11.7.1",
+    "npm": "^11.5.2"
   }
 }
