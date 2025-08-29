@@ -2,8 +2,8 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on merge targeting the default branch
-  merge:
+  # Runs on pushes targeting the default branch
+  push:
     branches: ["gh-pages"]
 
   # Allows you to run this workflow manually from the Actions tab
