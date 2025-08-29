@@ -1,3 +1,5 @@
+/* eslint-env node, mocha */
+/* eslint-disable @typescript-eslint/no-require-imports */
 describe('Sample Test Suite', function() {
 const assert = require('assert');
 const { JSDOM } = require('jsdom');
