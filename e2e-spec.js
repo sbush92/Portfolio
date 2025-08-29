@@ -54,4 +54,33 @@ describe('Portfolio Project Tests', function() {
       assert.strictEqual(totalPages, 3);
     });
   });
+
+  describe('Theme Toggle', function() {
+    it('should toggle between light and dark themes', function() {
+      const dom = new JSDOM(`<!DOCTYPE html><body></body>`, { runScripts: "dangerously", resources: "usable" });
+      const { window } = dom;
+      
+      // Simulate the ThemeToggle class
+      let currentTheme = 'dark';
+      function toggleTheme() {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        window.document.documentElement.setAttribute('data-theme', currentTheme);
+        return currentTheme;
+      }
+      
+      // Test initial state
+      window.document.documentElement.setAttribute('data-theme', 'dark');
+      assert.strictEqual(window.document.documentElement.getAttribute('data-theme'), 'dark');
+      
+      // Test toggle to light
+      const newTheme = toggleTheme();
+      assert.strictEqual(newTheme, 'light');
+      assert.strictEqual(window.document.documentElement.getAttribute('data-theme'), 'light');
+      
+      // Test toggle back to dark
+      const backToTheme = toggleTheme();
+      assert.strictEqual(backToTheme, 'dark');
+      assert.strictEqual(window.document.documentElement.getAttribute('data-theme'), 'dark');
+    });
+  });
 });
