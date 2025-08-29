@@ -7,7 +7,8 @@
     "start": "npm run open",
     "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\"",
     "test": "mocha e2e-spec.js",
-    "ci": "start-server-and-test http://localhost:8080"
+    "ci": "start-server-and-test http://localhost:8080",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
