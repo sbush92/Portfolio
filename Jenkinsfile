@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'agent1' }
+    agent { docker { image 'docker:24.0.7' args '-v /var/run/docker.sock:/var/run/docker.sock' } }
 
     environment {
         REGISTRY = "ghcr.io"
