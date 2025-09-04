@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-    docker {
-        image 'docker:24.0.7'
-        args '-v /var/run/docker.sock:/var/run/docker.sock'
-    }
-}
+    agent any
 
     environment {
         REGISTRY = "ghcr.io"
@@ -14,11 +9,6 @@ pipeline {
     }
 
     stages {
-        stage("Install git") {
-            steps {
-                sh 'apk add --no-cache git'
-            }
-        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/sbush92/Portfolio.git'
