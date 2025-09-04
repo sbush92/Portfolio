@@ -41,7 +41,7 @@ pipeline {
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
                             ssh $SERVER 'docker pull $IMAGE_NAME:$IMAGE_TAG'
                             ssh $SERVER 'docker stop portfolio || true && docker rm portfolio || true'
-                            ssh $SERVER 'docker run -d --name portfolio -p 1234:80 $IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker run -d --name portfolio -p 8080:80 $IMAGE_NAME:$IMAGE_TAG'
                         """
                     }
                 }
