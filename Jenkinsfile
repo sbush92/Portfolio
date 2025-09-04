@@ -9,6 +9,13 @@ pipeline {
     }
 
     stages {
+        
+        stage('Whoami') {
+            steps {
+                sh 'id'
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/sbush92/Portfolio.git'
