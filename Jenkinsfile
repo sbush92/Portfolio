@@ -14,11 +14,6 @@ pipeline {
     }
 
     stages {
-        stage("Install git") {
-            steps {
-                sh 'apk add --no-cache git'
-            }
-        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/sbush92/Portfolio.git'
