@@ -41,7 +41,7 @@ pipeline {
 
         stage('Deploy on Webserver') {
             steps {
-                sshagent(['webserver-ssh']) {
+                sshagent(['agent1']) {
                     withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT')]) {
                         sh """
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
