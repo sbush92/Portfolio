@@ -1,18 +1,10 @@
-# Use Node only to install http-server
-FROM node:22-alpine
+FROM nginx:alpine
 
-# Set working directory
-WORKDIR /app
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copy site files
-COPY . .
+# Copy your portfolio files into nginx's default webroot
+COPY . /usr/share/nginx/html
 
-# Install http-server globally
-RUN npm install -g http-server
-
-# Expose port
-EXPOSE 1234
-
-# Run http-server on container start
-CMD ["http-server", "-p", "1234", "-a", "0.0.0.0", "."]
- 
+# Expose HTTP port
+EXPOSE 80
