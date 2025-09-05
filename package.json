@@ -34,6 +34,7 @@
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
     "mocha": "^11.7.1",
-    "npm": "^11.5.2"
+    "npm": "^11.5.2",
+    "pg": "^8.16.3"
   }
 }
