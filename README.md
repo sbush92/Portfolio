@@ -71,3 +71,5 @@ This will launch the site at [http://localhost:1234](http://localhost:1234).
 ## License
 
 This project is licensed under the ISC License.
+
+Contents of this site are © Copyright 2025 Samuel Bush. All rights reserved.
