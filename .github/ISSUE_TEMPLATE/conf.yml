@@ -1,0 +1,65 @@
+name: Portfolio Bug Report
+description: Report a bug or issue with the Portfolio website or blog.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["sbush92/Portfolio"]
+assignees:
+  - sbush92
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the Portfolio website! Please provide as much detail as possible so we can resolve your issue quickly.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details (optional)
+      description: How can we reach you if we need more info? (Email, GitHub, etc.)
+      placeholder: ex. @github-username
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug or issue you encountered. What did you expect to happen? What actually happened?
+      placeholder: e.g. The navigation menu does not open on mobile.
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Portfolio Version
+      description: What version of the Portfolio site are you using? (Check the footer or About page if unsure)
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      description: Select all browsers where you observed the issue.
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output or screenshots
+      description: Paste any relevant error messages, browser console output, or screenshots. (Log output will be formatted automatically.)
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://samuelbush.me/code-of-conduct). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
