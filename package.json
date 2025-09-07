@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/sbush92/Portfolio#readme",
   "devDependencies": {
-    "@eslint/js": "^9.34.0",
+    "@eslint/js": "^9.35.0",
     "concurrently": "^9.2.1",
     "eslint": "^9.34.0",
     "globals": "^16.3.0",
