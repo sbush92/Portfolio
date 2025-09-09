@@ -23,18 +23,18 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "concurrently": "^9.2.1",
-    "eslint": "^9.34.0",
+    "eslint": "^9.35.0",
     "globals": "^16.3.0",
     "http-server": "^14.1.1",
     "jsdom": "^26.1.0",
     "start-server-and-test": "^2.0.13",
-    "typescript-eslint": "^8.41.0"
+    "typescript-eslint": "^8.42.0"
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
     "mocha": "^11.7.1",
-    "npm": "^11.5.2",
+    "npm": "^11.6.0",
     "pg": "^8.16.3"
   }
 }
