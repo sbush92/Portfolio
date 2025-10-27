@@ -33,6 +33,8 @@
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
+    "cords": "^1.0.4",
+    "dotenv": "^17.2.3",
     "mocha": "^11.7.1",
     "npm": "^11.6.0",
     "pg": "^8.16.3"

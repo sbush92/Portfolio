@@ -1,8 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const db = require('./db/index');
 const PORT = 8080;
 
+// Enable CORS for all origins (for development)
+app.use(cors());
 app.use(express.json());
 
 app.get('/blog', async (req, res) => {
