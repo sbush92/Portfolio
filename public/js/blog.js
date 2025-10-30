@@ -1,8 +1,12 @@
 const postsPerPage = 6;
-const urlParams = new URLSearchParams(window.location.search);
-const initialPage = parseInt(urlParams.get('page')) || 1;
 
-fetch('http://localhost:8080/blog')
+let blogData = [];
+
+// Set the API endpoint, allowing override via a global variable or environment variable
+const BLOG_API_ENDPOINT = window.BLOG_API_ENDPOINT || 'http://localhost:8080/blog';
+
+// Fetch blog data and initialize view
+fetch(BLOG_API_ENDPOINT)
   .then(response => response.json())
   .then(data => {
     blogData = data;
@@ -11,14 +15,11 @@ fetch('http://localhost:8080/blog')
   })
   .catch(error => console.error('Error fetching blog data:', error));
 
-let blogData = [
-
-];
-
+// Show the current page based on URL (used on load and popstate)
 function showCurrentPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const page = parseInt(urlParams.get('page')) || 1;
-  generateBlogPosts(page);
+  displayBlogPosts(page);
 }
 
 // Listen for browser navigation (back/forward)
@@ -35,17 +36,17 @@ function generateBlogPosts(pageNumber) {
   const endIndex = startIndex + postsPerPage;
 
   // Loop through the blogData and create HTML for each post within the current page
+  let postsHTML = "";
   for (let i = startIndex; i < endIndex && i < blogData.length; i++) {
     const post = blogData[i];
-    const postHTML = `
+    postsHTML += `
       <div class="post post-${i}">
-        <h5>${post.title}</h5>
-        <p>${post.content}</p>
+        <h5>${escapeHtml(post.title)}</h5>
+        <p>${escapeHtml(post.content)}</p>
       </div>
     `;
-    // Append postHTML to blogPostsContainer
-    blogPostsContainer.innerHTML += postHTML;
   }
+  blogPostsContainer.innerHTML = postsHTML;
 }
 
 // Function to generate pagination
@@ -63,9 +64,10 @@ function generatePagination() {
     const pageLink = document.createElement("a");
     pageLink.href = `blog.html?page=${i}`;
     pageLink.textContent = i;
-    pageLink.addEventListener("click", function(e) { 
+    pageLink.addEventListener("click", function(e) {
       e.preventDefault();
-      displayBlogPosts(i); 
+      history.pushState(null, null, `blog.html?page=${i}`);
+      showCurrentPage();
     });
     paginationContainer.appendChild(pageLink);
   }
@@ -75,7 +77,18 @@ function generatePagination() {
 function displayBlogPosts(pageNumber) {
   // Update the URL to reflect the current page
   history.pushState(null, null, `blog.html?page=${pageNumber}`);
-  
+
   // Generate and display blog posts for the given page
   generateBlogPosts(pageNumber);
+
+  // Regenerate pagination to keep it up-to-date
+  generatePagination();
+}
+
+// Simple HTML escape helper to avoid injecting raw HTML from data
+function escapeHtml(str) {
+  if (typeof str !== 'string') return '';
+  return str.replace(/[&<>"']/g, function(m) {
+    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m];
+  });
 }
