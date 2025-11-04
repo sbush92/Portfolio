@@ -1,0 +1,32 @@
+# Start from the official Jenkins SSH agent image
+FROM jenkins/ssh-agent:latest
+
+USER root
+
+ARG DOCKER_GID=990
+
+# Allow jenkins user to modify /etc/environment
+RUN touch /etc/environment && chmod 666 /etc/environment \
+    && ssh-keygen -A \
+    && chown -R jenkins:jenkins /etc/ssh \
+    && chmod 600 /etc/ssh/ssh_host_* \
+    && groupadd -f -G ${DOCKER_GID} docker \
+    && usermod -aG docker jenkins
+
+# Install required packages
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    docker.io \
+    nodejs \
+    npm \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+USER jenkins
+
+# Verify versions
+RUN git --version && docker --version && node -v && npm -v
+
+# Revert to Jenkins user for safety
+USER jenkins
