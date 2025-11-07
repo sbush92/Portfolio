@@ -47,7 +47,8 @@ pipeline {
                             ssh $SERVER 'docker stop portfolio_frontend || true && docker rm portfolio_frontend || true'
                             ssh $SERVER 'docker stop portfolio_backend || true && docker rm portfolio_backend || true'
                             ssh $SERVER 'docker run -d --name portfolio_frontend -p 80:80 $FRONT_IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'docker run -d --name portfolio_backend --env-file $DB_ENV_FILE -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
+                            scp $DB_ENV_FILE $SERVER:/tmp/db.env
+                            ssh $SERVER 'docker run -d --name portfolio_backend --env-file /tmp/db.env -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
                         """
                     }
                 }
