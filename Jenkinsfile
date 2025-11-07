@@ -3,7 +3,8 @@ pipeline {
 
     environment {
         REGISTRY = "ghcr.io"
-        IMAGE_NAME = "ghcr.io/sbush92/portfolio"
+        FRONT_IMAGE_NAME = "ghcr.io/sbush92/portfolio"
+        BACK_IMAGE_NAME = "ghcr.io/sbush92/portfolio-backend"
         IMAGE_TAG  = "latest"
         SERVER     = "jenkins@192.168.86.234"
     }
@@ -18,7 +19,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
+                sh "docker build -t $FRONT_IMAGE_NAME:$IMAGE_TAG ."
+                sh "docker build -t $BACK_IMAGE_NAME:$IMAGE_TAG ./backend"
             }
         }
 
@@ -27,7 +29,8 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT')]) {
                     sh """
                         echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin
-                        docker push $IMAGE_NAME:$IMAGE_TAG
+                        docker push $FRONT_IMAGE_NAME:$IMAGE_TAG
+                        docker push $BACK_IMAGE_NAME:$IMAGE_TAG
                     """
                 }
             }
@@ -39,9 +42,12 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT')]) {
                         sh """
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
-                            ssh $SERVER 'docker pull $IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'docker stop portfolio || true && docker rm portfolio || true'
-                            ssh $SERVER 'docker run -d --name portfolio -p 8080:80 $IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker pull $FRONT_IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker pull $BACK_IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker stop portfolio_frontend || true && docker rm portfolio_frontend || true'
+                            ssh $SERVER 'docker stop portfolio_backend || true && docker rm portfolio_backend || true'
+                            ssh $SERVER 'docker run -d --name portfolio_frontend -p 80:80 $FRONT_IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker run -d --name portfolio_backend -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
                         """
                     }
                 }
