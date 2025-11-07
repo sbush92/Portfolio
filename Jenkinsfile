@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy on Webserver') {
             steps {
                 sshagent(['agent1']) {
-                    withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT')]) {
+                    withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT'), file(credentialsId: 'db-env', variable: 'DB_ENV_FILE')]) {
                         sh """
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
                             ssh $SERVER 'docker pull $FRONT_IMAGE_NAME:$IMAGE_TAG'
@@ -47,7 +47,7 @@ pipeline {
                             ssh $SERVER 'docker stop portfolio_frontend || true && docker rm portfolio_frontend || true'
                             ssh $SERVER 'docker stop portfolio_backend || true && docker rm portfolio_backend || true'
                             ssh $SERVER 'docker run -d --name portfolio_frontend -p 80:80 $FRONT_IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'docker run -d --name portfolio_backend -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
+                            ssh $SERVER 'docker run -d --name portfolio_backend --env-file $DB_ENV_FILE -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
                         """
                     }
                 }
