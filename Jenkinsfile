@@ -42,17 +42,17 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT'), file(credentialsId: 'db-env', variable: 'DB_ENV_FILE')]) {
                         sh """
                             # Copy docker-compose.yml to server
-                             scp docker-compose.yml $SERVER:/home/jenkins/docker-compose.yml
+                             scp docker-compose.yml $SERVER:/var/lib/jenkins/docker-compose.yml
                              # Copy .env file to server (from Jenkins secret)
-                             scp $DB_ENV_FILE $SERVER:/home/jenkins/.env
+                             scp $DB_ENV_FILE $SERVER:/var/lib/jenkins/.env
                              # Login to registry on server
                              ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
                              # Pull latest images using docker-compose
-                             ssh $SERVER 'cd /home/jenkins && docker-compose -f docker-compose.yml pull'
+                             ssh $SERVER 'cd /var/lib/jenkins && docker-compose -f docker-compose.yml pull'
                              # Bring up services
-                             ssh $SERVER 'cd /home/jenkins && docker-compose -f docker-compose.yml --env-file .env up -d'
+                             ssh $SERVER 'cd /var/lib/jenkins && docker-compose -f docker-compose.yml --env-file .env up -d'
                              # Clean up .env file for security
-                             ssh $SERVER 'rm -f /home/jenkins/.env'
+                             ssh $SERVER 'rm -f /var/lib/jenkins/.env'
                         """
                     }
                 }
