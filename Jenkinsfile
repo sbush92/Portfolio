@@ -41,15 +41,18 @@ pipeline {
                 sshagent(['agent1']) {
                     withCredentials([usernamePassword(credentialsId: 'ghcr-creds', usernameVariable: 'GH_USER', passwordVariable: 'GH_PAT'), file(credentialsId: 'db-env', variable: 'DB_ENV_FILE')]) {
                         sh """
+                            # Copy docker-compose.yml to server
+                            scp docker-compose.yml $SERVER:/tmp/docker-compose.yml
+                            # Copy .env file to server (from Jenkins secret)
+                            scp $DB_ENV_FILE $SERVER:/tmp/.env
+                            # Login to registry on server
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
-                            ssh $SERVER 'docker pull $FRONT_IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'docker pull $BACK_IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'docker stop portfolio_frontend || true && docker rm portfolio_frontend || true'
-                            ssh $SERVER 'docker stop portfolio_backend || true && docker rm portfolio_backend || true'
-                            ssh $SERVER 'docker run -d --name portfolio_frontend -p 80:80 $FRONT_IMAGE_NAME:$IMAGE_TAG'
-                            ssh $SERVER 'rm -f /tmp/db.env'
-                            scp $DB_ENV_FILE $SERVER:/tmp/db.env
-                            ssh $SERVER 'docker run -d --name portfolio_backend --env-file /tmp/db.env -p 8080:8080 $BACK_IMAGE_NAME:$IMAGE_TAG'
+                            # Pull latest images using docker compose
+                            ssh $SERVER 'cd /tmp && docker compose -f docker-compose.yml pull'
+                            # Bring up services
+                            ssh $SERVER 'cd /tmp && docker compose -f docker-compose.yml --env-file .env up -d'
+                            # Clean up .env file for security
+                            ssh $SERVER 'rm -f /tmp/.env'
                         """
                     }
                 }
