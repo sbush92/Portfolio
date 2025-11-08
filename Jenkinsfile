@@ -47,10 +47,10 @@ pipeline {
                             scp $DB_ENV_FILE $SERVER:/tmp/.env
                             # Login to registry on server
                             ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
-                            # Pull latest images using docker compose
-                            ssh $SERVER 'cd /tmp && docker compose -f docker-compose.yml pull'
+                            # Pull latest images using docker-compose
+                            ssh $SERVER 'cd /tmp && docker-compose -f docker-compose.yml pull'
                             # Bring up services
-                            ssh $SERVER 'cd /tmp && docker compose -f docker-compose.yml --env-file .env up -d'
+                            ssh $SERVER 'cd /tmp && docker-compose -f docker-compose.yml --env-file .env up -d'
                             # Clean up .env file for security
                             ssh $SERVER 'rm -f /tmp/.env'
                         """
