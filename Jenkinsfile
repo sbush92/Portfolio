@@ -43,9 +43,10 @@ pipeline {
                         sh """
                             # Copy docker-compose.yml to server
                              scp docker-compose.yml $SERVER:/var/lib/jenkins/docker-compose.yml
-                             # Copy .env file as .env.tmp, move and set permissions so Jenkins can delete it
-                             scp $DB_ENV_FILE $SERVER:/var/lib/jenkins/.env.tmp
-                             ssh $SERVER 'mv /var/lib/jenkins/.env.tmp /var/lib/jenkins/.env && chmod 600 /var/lib/jenkins/.env'
+                             # Ensure backend directory exists and copy .env file as .env.tmp, then move and set permissions
+                             ssh $SERVER 'mkdir -p /var/lib/jenkins/backend'
+                             scp $DB_ENV_FILE $SERVER:/var/lib/jenkins/backend/.env.tmp
+                             ssh $SERVER 'mv /var/lib/jenkins/backend/.env.tmp /var/lib/jenkins/backend/.env && chmod 600 /var/lib/jenkins/backend/.env'
                              # Login to registry on server
                              ssh $SERVER 'echo $GH_PAT | docker login $REGISTRY -u $GH_USER --password-stdin'
                              # Pull latest images using docker-compose
@@ -53,7 +54,7 @@ pipeline {
                              # Bring up services
                              ssh $SERVER 'cd /var/lib/jenkins &&  docker compose -f docker-compose.yml --env-file .env up -d'
                              # Clean up .env file for security
-                             ssh $SERVER 'rm -f /var/lib/jenkins/.env'
+                             ssh $SERVER 'rm -f /var/lib/jenkins/backend/.env'
                         """
                     }
                 }
