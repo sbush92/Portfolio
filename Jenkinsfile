@@ -20,7 +20,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh "docker build -t $FRONT_IMAGE_NAME:$IMAGE_TAG -f Dockerfile.front ."
-                sh "docker build -t $BACK_IMAGE_NAME:$IMAGE_TAG -f ./backend/Dockerfile ./backend"
+                sh "docker build -t $BACK_IMAGE_NAME:$IMAGE_TAG -f ./backend/Dockerfile.back ./backend"
             }
         }
 
