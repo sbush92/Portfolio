@@ -27,7 +27,7 @@
     "globals": "^16.4.0",
     "http-server": "^14.1.1",
     "jsdom": "^27.0.1",
-    "start-server-and-test": "^2.0.13",
+    "start-server-and-test": "^2.1.2",
     "typescript-eslint": "^8.46.3"
   },
   "dependencies": {
