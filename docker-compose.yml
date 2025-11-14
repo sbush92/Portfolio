@@ -8,7 +8,7 @@ services:
     networks:
       - appnet
   backend:
-    image: ghcr.io/sbush92/portfolio:latest
+    image: ghcr.io/sbush92/portfolio-backend:latest
     ports:
       - "8080:8080"
     env_file:
