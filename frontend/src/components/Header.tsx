@@ -1,24 +1,47 @@
-import React from 'react';
-import '../App.css';
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
-const Header: React.FC = () => (
-  <header>
-    <div className="menu-btn" aria-label="Menu Button">
-      <div className="btn-line"></div>
-      <div className="btn-line"></div>
-      <div className="btn-line"></div>
-    </div>
-    <nav className="menu" aria-label="Main Navigation">
-      <div className="menu-branding"><div className="portrait"></div></div>
-      <ul className="menu-nav">
-        <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
-        <li className="nav-item"><a href="/about" className="nav-link">About Me</a></li>
-        <li className="nav-item"><a href="/work" className="nav-link">My Work</a></li>
-        <li className="nav-item"><a href="/blog" className="nav-link">Blog</a></li>
-        <li className="nav-item"><a href="/contact" className="nav-link">How To Reach Me</a></li>
-      </ul>
-    </nav>
-  </header>
-);
+export default function Header() {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-export default Header;
+  return (
+    <header>
+      <Button
+        id="nav-menu-button"
+        aria-controls={open ? 'nav-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        variant="contained"
+      >
+        Menu
+      </Button>
+      <Menu
+        id="nav-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        slotProps={{
+          list: {
+            'aria-labelledby': 'nav-menu-button',
+          },
+        }}
+      >
+        <MenuItem onClick={handleClose} component="a" href="/">Home</MenuItem>
+        <MenuItem onClick={handleClose} component="a" href="/about">About Me</MenuItem>
+        <MenuItem onClick={handleClose} component="a" href="/work">My Work</MenuItem>
+        <MenuItem onClick={handleClose} component="a" href="/blog">Blog</MenuItem>
+        <MenuItem onClick={handleClose} component="a" href="/contact">How To Reach Me</MenuItem>
+      </Menu>
+    </header>
+  );
+}
