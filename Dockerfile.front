@@ -4,7 +4,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your portfolio files into nginx's default webroot
-COPY . /usr/share/nginx/html
+COPY ./public/ /usr/share/nginx/html
 
 # Expose HTTP port
 EXPOSE 80

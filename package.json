@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run open",
-    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\"",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/index.html\"",
     "test": "mocha e2e-spec.js",
     "ci": "start-server-and-test http://localhost:8080",
     "lint": "eslint ."

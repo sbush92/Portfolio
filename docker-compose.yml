@@ -1,0 +1,19 @@
+services:
+  frontend:
+    image: ghcr.io/sbush92/portfolio:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
+  backend:
+    image: ghcr.io/sbush92/portfolio-backend:latest
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./backend/.env
+    networks:
+      - appnet
+networks:
+  appnet:
