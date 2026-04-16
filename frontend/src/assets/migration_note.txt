@@ -1,0 +1,1 @@
+All static assets (images, CSS, JS) from the old public/ directory have been moved to frontend/public/ for React. Use /img/... and /css/main.css in your React components.

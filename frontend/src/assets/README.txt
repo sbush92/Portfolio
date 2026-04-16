@@ -1,0 +1,1 @@
+All static images from public/img and public/img/projects have been migrated to frontend/public/img and frontend/public/img/projects for use in the React app. Reference them as /img/filename.jpg or /img/projects/filename.jpg in your components.
