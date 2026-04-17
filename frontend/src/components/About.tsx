@@ -1,7 +1,7 @@
 import React from 'react';
 
 const About: React.FC = () => (
-  <main id="about">
+  <main id="about" className="bg-overlay">
     <h1 className="lg-heading">About<span className="text-secondary">ME</span></h1>
     <h2 className="sm-heading">
       Team player, quick learner, and avid traveler....

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home: React.FC = () => (
-  <main id="home">
+  <main id="home" className="bg-overlay">
     <h1 className="lg-heading">
       Samuel <span className="text-secondary">Bush</span>
     </h1>

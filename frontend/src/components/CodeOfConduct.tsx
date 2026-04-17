@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CodeOfConduct: React.FC = () => (
-  <main id="code-of-conduct">
+  <main id="code-of-conduct" className="bg-overlay">
     <h1 className="lg-heading">Code<span className="text-secondary">of Conduct</span></h1>
     <section className="bio">
       <p>

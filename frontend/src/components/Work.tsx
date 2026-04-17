@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Work: React.FC = () => (
-  <main id="work">
+  <main id="work" className="bg-overlay">
     <h1 className="lg-heading">My<span className="text-secondary">Work</span></h1>
     <h2 className="sm-heading">Check out some of my projects...</h2>
     <div className="projects">
