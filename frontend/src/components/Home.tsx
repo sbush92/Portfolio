@@ -1,4 +1,7 @@
+
 import React from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Home: React.FC = () => (
   <main id="home" className="bg-overlay">
@@ -9,11 +12,11 @@ const Home: React.FC = () => (
       Senior IT Engineer at SecurityMetrics, Master of Computer Science
     </h2>
     <div className="icons">
-      <a href="https://www.linkedin.com/in/samuelbush92/">
-        <i className="fab fa-linkedin fa-2x"></i>
+      <a href="https://www.linkedin.com/in/samuelbush92/" aria-label="LinkedIn">
+        <LinkedInIcon fontSize="large" />
       </a>
-      <a href="https://github.com/sbush92">
-        <i className="fab fa-github fa-2x"></i>
+      <a href="https://github.com/sbush92" aria-label="GitHub">
+        <GitHubIcon fontSize="large" />
       </a>
     </div>
   </main>

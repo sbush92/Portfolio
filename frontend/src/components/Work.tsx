@@ -1,4 +1,7 @@
+
 import React from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 const Work: React.FC = () => (
   <main id="work" className="bg-overlay">
@@ -10,10 +13,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project6.jpg" alt="Project" />
         </a>
         <a href="https://www.samuelbush.me" className="btn-light">
-          <i className="fas fa-eye"></i> Portfolio Site
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Portfolio Site
         </a>
         <a href="https://github.com/sbush92/Portfolio" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
       <div className="item">
@@ -21,10 +24,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project2.jpg" alt="Project" />
         </a>
         <a href="https://ieeexplore.ieee.org/document/9249188" className="btn-light">
-          <i className="fas fa-eye"></i> IEEE Publication
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> IEEE Publication
         </a>
         <a href="https://github.com/sbush92/Virtual-Machine" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
       <div className="item">
@@ -32,10 +35,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project3.jpg" alt="Project" />
         </a>
         <a href="https://www.overleaf.com/read/yshpttwzfgkz" className="btn-light">
-          <i className="fas fa-eye"></i> Sentiment Analysis with CUDA
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Sentiment Analysis with CUDA
         </a>
         <a href="https://github.com/sbush92/Sentiment-Analysis" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
       <div className="item">
@@ -43,10 +46,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project4.jpg" alt="Project" />
         </a>
         <a href="https://www.overleaf.com/read/ytkvgbhtnvqx" className="btn-light">
-          <i className="fas fa-eye"></i> Stable Marriage Algorithm
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Stable Marriage Algorithm
         </a>
         <a href="https://github.com/sbush92/Stable-Marriage" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
       <div className="item">
@@ -54,10 +57,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project5.jpg" alt="Project" />
         </a>
         <a href="https://www.overleaf.com/read/kbtnkkmmsjkz" className="btn-light">
-          <i className="fas fa-eye"></i> Two-Wheeled-Robot
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Two-Wheeled-Robot
         </a>
         <a href="https://github.com/sbush92/Two-Wheeled-Robot" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
       <div className="item">
@@ -65,10 +68,10 @@ const Work: React.FC = () => (
           <img src="/img/projects/project6.jpg" alt="Project" />
         </a>
         <a href="https://github.com/sbush92/Dimension-Reduction" className="btn-light">
-          <i className="fas fa-eye"></i> Dimension Reduction
+          <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Dimension Reduction
         </a>
         <a href="https://github.com/sbush92/Dimension-Reduction/blob/main/data_reduction.pdf" className="btn-dark">
-          <i className="fab fa-github"></i> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
         </a>
       </div>
     </div>
