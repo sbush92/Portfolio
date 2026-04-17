@@ -3,8 +3,8 @@
   "name": "Samuel Bush Portfolio",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "type": "image/svg+xml",
+      "src": "/public/img/portrait_small.jpg",
+      "type": "image/jpeg",
       "sizes": "any"
     }
   ],
