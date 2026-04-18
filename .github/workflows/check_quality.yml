@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '0 0 * * 0'  # Runs at 00:00 every Sunday
+    - cron: "0 0 * * 0" # Runs at 00:00 every Sunday
 
 jobs:
   lint:
@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: "22"
 
       - name: Install dependencies
         run: npm install
@@ -41,7 +41,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: "22"
 
       - name: Install dependencies
         run: npm install

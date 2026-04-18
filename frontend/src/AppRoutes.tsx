@@ -1,11 +1,11 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Work from './components/Work';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-import CodeOfConduct from './components/CodeOfConduct';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Work from "./components/Work";
+import Blog from "./components/Blog";
+import Contact from "./components/Contact";
+import CodeOfConduct from "./components/CodeOfConduct";
 
 const AppRoutes: React.FC = () => (
   <Routes>

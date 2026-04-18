@@ -21,32 +21,37 @@ A modern portfolio application with a React + Vite frontend and a Node/Express b
 ### Installation
 
 1. Clone the repository:
-	 ```sh
-	 git clone https://github.com/sbush92/Portfolio.git
-	 cd Portfolio
-	 ```
+
+   ```sh
+   git clone https://github.com/sbush92/Portfolio.git
+   cd Portfolio
+   ```
 
 2. Install workspace dependencies:
-	 ```sh
-	 npm install
-	 ```
+   ```sh
+   npm install
+   ```
 
 This installs the root tooling plus the frontend and backend workspace dependencies.
 
 ### Running Locally
 
 Start the Vite frontend locally:
+
 ```sh
 npm start
 ```
+
 This will launch the SPA at [http://localhost:5173](http://localhost:5173).
 
 Build the frontend for production:
+
 ```sh
 npm run build
 ```
 
 Preview the production build locally:
+
 ```sh
 npm run preview
 ```
@@ -54,13 +59,13 @@ npm run preview
 ### Linting and Testing
 
 - Run ESLint:
-	```sh
-	npm run lint
-	```
+  ```sh
+  npm run lint
+  ```
 - Run tests:
-	```sh
-	npm test
-	```
+  ```sh
+  npm test
+  ```
 
 ## Project Structure
 
