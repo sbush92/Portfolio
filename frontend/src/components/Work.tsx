@@ -9,20 +9,16 @@ const Work: React.FC = () => (
     <h2 className="sm-heading">Check out some of my projects...</h2>
     <div className="projects">
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project6.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project6.jpg" alt="Project" />
         <a href="https://www.samuelbush.me" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Portfolio Site
         </a>
         <a href="https://github.com/sbush92/Portfolio" className="btn-dark">
-          <GitHubIcon style={{ verticalAlign: 'middle' }} /> Github
+          <GitHubIcon style={{ verticalAlign: 'middle' }} /> GitHub
         </a>
       </div>
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project2.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project2.jpg" alt="Project" />
         <a href="https://ieeexplore.ieee.org/document/9249188" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> IEEE Publication
         </a>
@@ -31,9 +27,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project3.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project3.jpg" alt="Project" />
         <a href="https://www.overleaf.com/read/yshpttwzfgkz" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Sentiment Analysis with CUDA
         </a>
@@ -42,9 +36,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project4.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project4.jpg" alt="Project" />
         <a href="https://www.overleaf.com/read/ytkvgbhtnvqx" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Stable Marriage Algorithm
         </a>
@@ -53,9 +45,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project5.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project5.jpg" alt="Project" />
         <a href="https://www.overleaf.com/read/kbtnkkmmsjkz" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Two-Wheeled-Robot
         </a>
@@ -64,9 +54,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <a href="#">
-          <img src="/img/projects/project6.jpg" alt="Project" />
-        </a>
+        <img src="/img/projects/project6.jpg" alt="Project" />
         <a href="https://github.com/sbush92/Dimension-Reduction" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: 'middle' }} /> Dimension Reduction
         </a>

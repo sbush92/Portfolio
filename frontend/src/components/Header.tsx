@@ -2,6 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -36,11 +37,11 @@ export default function Header() {
           },
         }}
       >
-        <MenuItem onClick={handleClose} component="a" href="/">Home</MenuItem>
-        <MenuItem onClick={handleClose} component="a" href="/about">About Me</MenuItem>
-        <MenuItem onClick={handleClose} component="a" href="/work">My Work</MenuItem>
-        <MenuItem onClick={handleClose} component="a" href="/blog">Blog</MenuItem>
-        <MenuItem onClick={handleClose} component="a" href="/contact">How To Reach Me</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/">Home</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/about">About Me</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/work">My Work</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/blog">Blog</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/contact">How To Reach Me</MenuItem>
       </Menu>
     </header>
   );
