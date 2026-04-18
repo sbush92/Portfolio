@@ -1,16 +1,14 @@
-Responsive Portfolio Website
-
 # Portfolio
 
-A modern, responsive portfolio website and blog for Samuel Bush. This project showcases professional experience, technical skills, and selected projects, and includes a personal tech blog.
+A modern portfolio application with a React + Vite frontend and a Node/Express backend. The frontend showcases professional experience, technical skills, selected projects, and a personal tech blog.
 
 ## Features
 
 - **Responsive Design:** Works on desktop and mobile devices.
-- **Single Page Navigation:** Home, About, Work, Blog, and Contact sections.
+- **Single Page Navigation:** React Router powered Home, About, Work, Blog, and Contact routes.
 - **Project Gallery:** Highlights selected projects with links to live demos and source code.
 - **Personal Blog:** Tech posts and updates, with pagination.
-- **Accessible & Modern UI:** Built with semantic HTML5, CSS Grid/Flexbox, and FontAwesome icons.
+- **Accessible & Modern UI:** Built with React, Vite, and MUI.
 - **Automated Quality Checks:** Linting and testing via GitHub Actions.
 
 ## Getting Started
@@ -28,18 +26,30 @@ A modern, responsive portfolio website and blog for Samuel Bush. This project sh
 	 cd Portfolio
 	 ```
 
-2. Install dependencies:
+2. Install workspace dependencies:
 	 ```sh
 	 npm install
 	 ```
 
+This installs the root tooling plus the frontend and backend workspace dependencies.
+
 ### Running Locally
 
-Start a local development server:
+Start the Vite frontend locally:
 ```sh
 npm start
 ```
-This will launch the site at [http://localhost:1234](http://localhost:1234).
+This will launch the SPA at [http://localhost:5173](http://localhost:5173).
+
+Build the frontend for production:
+```sh
+npm run build
+```
+
+Preview the production build locally:
+```sh
+npm run preview
+```
 
 ### Linting and Testing
 
@@ -54,14 +64,10 @@ This will launch the site at [http://localhost:1234](http://localhost:1234).
 
 ## Project Structure
 
-- `index.html` – Home page
-- `about.html` – About me
-- `work.html` – Project gallery
-- `blog.html` – Blog with pagination
-- `contact.html` – Contact information
-- `js/` – JavaScript files for interactivity
-- `css/` – Main stylesheet
-- `img/` – Images and project screenshots
+- `frontend/` - React + TypeScript + Vite single-page app
+- `backend/` - Express API and database integration
+- `public/` - Legacy static assets still referenced by the frontend
+- `e2e-spec.js` - Project test coverage
 
 ## Continuous Integration
 

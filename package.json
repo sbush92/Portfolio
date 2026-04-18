@@ -1,14 +1,21 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "private": true,
   "description": "Portfolio Website",
   "main": "index.js",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "start": "npm run open",
-    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/index.html\"",
+    "start": "npm run dev",
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "preview": "npm run preview --workspace frontend",
     "test": "mocha e2e-spec.js",
-    "ci": "start-server-and-test http://localhost:8080",
-    "lint": "eslint ."
+    "ci": "npm run build && npm test",
+    "lint": "npm run lint --workspace frontend"
   },
   "repository": {
     "type": "git",
@@ -22,18 +29,15 @@
   "homepage": "https://github.com/sbush92/Portfolio#readme",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "concurrently": "^9.2.1",
     "eslint": "^9.39.2",
     "globals": "^17.1.0",
-    "http-server": "^14.1.1",
     "jsdom": "^27.4.0",
-    "start-server-and-test": "^2.0.13",
     "typescript-eslint": "^8.54.0"
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
-    "mocha": "^11.7.5",
+    "mocha": "^11.3.0",
     "npm": "^11.12.1",
     "pg": "^8.16.3"
   }

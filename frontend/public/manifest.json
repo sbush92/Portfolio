@@ -1,0 +1,15 @@
+{
+  "short_name": "Portfolio",
+  "name": "Samuel Bush Portfolio",
+  "icons": [
+    {
+      "src": "/public/img/portrait_small.jpg",
+      "type": "image/jpeg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#444444",
+  "background_color": "#444444"
+}
