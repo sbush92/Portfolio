@@ -10,7 +10,7 @@ const Work: React.FC = () => (
     <h2 className="sm-heading">Check out some of my projects...</h2>
     <div className="projects">
       <div className="item">
-        <img src="/img/projects/project6.jpg" alt="Project" />
+        <img src="src/assets/projects/portfolio_site.jpg" alt="Project" />
         <a href="https://www.samuelbush.me" className="btn-light">
           <VisibilityIcon style={{ verticalAlign: "middle" }} /> Portfolio Site
         </a>
@@ -19,7 +19,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <img src="/img/projects/project2.jpg" alt="Project" />
+        <img src="src/assets/projects/IEEE.jpg" alt="Project" />
         <a
           href="https://ieeexplore.ieee.org/document/9249188"
           className="btn-light"
@@ -35,9 +35,9 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <img src="/img/projects/project3.jpg" alt="Project" />
+        <img src="src/assets/projects/Graduate_Project.jpg" alt="Project" />
         <a
-          href="https://www.overleaf.com/read/yshpttwzfgkz"
+          href="files/Graduate_Project.pdf"
           className="btn-light"
         >
           <VisibilityIcon style={{ verticalAlign: "middle" }} /> Sentiment
@@ -51,7 +51,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <img src="/img/projects/project4.jpg" alt="Project" />
+        <img src="src/assets/projects/project4.jpg" alt="Project" />
         <a
           href="https://www.overleaf.com/read/ytkvgbhtnvqx"
           className="btn-light"
@@ -67,7 +67,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <img src="/img/projects/project5.jpg" alt="Project" />
+        <img src="src/assets/projects/project5.jpg" alt="Project" />
         <a
           href="https://www.overleaf.com/read/kbtnkkmmsjkz"
           className="btn-light"
@@ -83,7 +83,7 @@ const Work: React.FC = () => (
         </a>
       </div>
       <div className="item">
-        <img src="/img/projects/project6.jpg" alt="Project" />
+        <img src="src/assets/projects/project6.jpg" alt="Project" />
         <a
           href="https://github.com/sbush92/Dimension-Reduction"
           className="btn-light"
