@@ -1,19 +1,19 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#eece1a',
-      contrastText: '#222', // for buttons, etc.
+      main: "#eece1a",
+      contrastText: "#222", // for buttons, etc.
     },
     background: {
-      default: '#444',
-      paper: '#515151',
+      default: "#444",
+      paper: "#515151",
     },
     text: {
-      primary: '#fff',
-      secondary: '#eece1a',
+      primary: "#fff",
+      secondary: "#eece1a",
     },
   },
   typography: {

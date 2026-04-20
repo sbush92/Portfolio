@@ -155,7 +155,10 @@ main .icons a:hover {
 .bg-overlay::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(68, 68, 68, 0.9);
   opacity: 0.4;
   z-index: 0;
@@ -239,15 +242,17 @@ img[alt="Project"] {
   max-width: 400px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   border: 3px solid #eece1a;
   background: #222;
   margin: 1rem auto;
-  transition: box-shadow 0.3s, border-color 0.3s;
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s;
   position: relative;
 }
 img[alt="Project"]:hover {
-  box-shadow: 0 8px 32px rgba(238,206,26,0.3);
+  box-shadow: 0 8px 32px rgba(238, 206, 26, 0.3);
   border-color: #fff;
 }
 main#contact {

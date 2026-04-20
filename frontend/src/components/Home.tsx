@@ -1,7 +1,6 @@
-
-import React from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import React from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Home: React.FC = () => (
   <main id="home" className="bg-overlay">
