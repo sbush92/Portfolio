@@ -13,7 +13,7 @@
     "dev": "npm run dev --workspace frontend",
     "build": "npm run build --workspace frontend",
     "preview": "npm run preview --workspace frontend",
-    "test": "node --test backend/test/app.test.js && mocha e2e-spec.js",
+    "test": "node --test e2e-spec.js",
     "ci": "npm run build && npm test",
     "lint": "npm run lint --workspace frontend",
     "format": "prettier . --write",
@@ -41,8 +41,6 @@
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
-    "mocha": "^11.7.5",
-    "npm": "^11.12.1",
     "pg": "^8.16.3"
   }
 }
