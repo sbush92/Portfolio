@@ -1,7 +1,9 @@
-/* eslint-env node, mocha */
+/* eslint-env node */
 /* eslint-disable @typescript-eslint/no-require-imports */
-const assert = require("assert");
+const { describe, it } = require("node:test");
+const assert = require("node:assert/strict");
 const { JSDOM } = require("jsdom");
+
 describe("Portfolio Project Tests", function () {
   describe("Menu Toggle", function () {
     it("should toggle menu classes on click", function () {
