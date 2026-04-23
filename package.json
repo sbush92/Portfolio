@@ -17,7 +17,8 @@
     "ci": "npm run build && npm test",
     "lint": "npm run lint --workspace frontend",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "e2e": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
   "homepage": "https://github.com/sbush92/Portfolio#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "chance": "^1.1.13",
+    "cypress": "^15.14.1",
     "eslint": "^10.2.1",
     "globals": "^17.1.0",
     "jsdom": "^29.0.2",

@@ -4,7 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Home: React.FC = () => (
   <main id="home" className="bg-overlay">
-    <h1 className="lg-heading">
+    <h1 className="lg-heading" data-testid="home-heading">
       Samuel <span className="text-secondary">Bush</span>
     </h1>
     <h2 className="sm-heading">
