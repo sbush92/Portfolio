@@ -15,7 +15,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev --workspace frontend -- --host 127.0.0.1 --port 4173",
+    command: "npm run dev --host 127.0.0.1 --port 4173",
+    cwd: "./frontend",
     url: "http://127.0.0.1:4173",
     reuseExistingServer: true,
   },
