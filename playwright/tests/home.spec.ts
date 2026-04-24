@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("home page renders heading and social links", async ({ page }) => {
-  await page.goto('http://localhost:5174/');
+  await page.goto('http://localhost:5173/');
 
   await expect(page.getByTestId("home-heading")).toContainText("Samuel Bush");
   await expect(
