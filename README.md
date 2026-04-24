@@ -67,7 +67,7 @@ npm run preview
   npm test
   ```
 
-## Project Structure
+## Project Structure 
 
 - `frontend/` - React + TypeScript + Vite single-page app
 - `backend/` - Express API and database integration
