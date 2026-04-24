@@ -16,7 +16,7 @@
     "test": "node --test e2e-spec.js",
     "test:pw": "playwright test",
     "playwright": "playwright test",
-    "ci": "npm run build && npm test",
+    "ci": "npm run build && npm test && npm test:pw",
     "lint": "npm run lint --workspace frontend",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
