@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "windows": "node .github/hooks/scripts/post-change-validation.js",
+        "linux": "node .github/hooks/scripts/post-change-validation.js",
+        "osx": "node .github/hooks/scripts/post-change-validation.js",
+        "cwd": "${workspaceFolder}",
+        "timeout": 120
+      }
+    ]
+  }
+}
