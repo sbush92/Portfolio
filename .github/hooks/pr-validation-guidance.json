@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "windows": "node .github/hooks/scripts/pr-validation-guidance.js",
+        "linux": "node .github/hooks/scripts/pr-validation-guidance.js",
+        "osx": "node .github/hooks/scripts/pr-validation-guidance.js",
+        "cwd": "${workspaceFolder}",
+        "timeout": 5
+      }
+    ]
+  }
+}

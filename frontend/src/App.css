@@ -218,23 +218,49 @@ main#blog {
 
 .blog-posts {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-    "post0 post1 post2"
-    "post3 post4 post5";
-  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-.blog-posts .post-0 {
-  grid-area: post0;
+.post {
+  padding: 1.5rem;
+  background: rgba(81, 81, 81, 0.9);
+  border-bottom: 5px solid #eece1a;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
-.blog-posts .post-1 {
-  grid-area: post1;
+.post h5 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
 }
-.blog-posts .post-2 {
-  grid-area: post2;
+.post p {
+  margin: 0;
+  white-space: pre-wrap;
 }
-.blog-posts .post-3 {
-  grid-area: post3;
+.blog-status {
+  padding: 1rem 1.25rem;
+  background: rgba(81, 81, 81, 0.9);
+  border-left: 4px solid #eece1a;
+}
+.blog-status-error {
+  border-left-color: #ff6b6b;
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.pagination button {
+  min-width: 2.5rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #eece1a;
+  background: rgba(81, 81, 81, 0.95);
+  color: #fff;
+  cursor: pointer;
+}
+.pagination button.is-active,
+.pagination button:hover {
+  background: #eece1a;
+  color: #222;
 }
 img[alt="Project"] {
   display: block;
