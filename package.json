@@ -42,7 +42,7 @@
     "jsdom": "^29.0.2",
     "prettier": "^3.8.3",
     "selenium": "^2.20.0",
-    "typescript-eslint": "^8.59.0"
+    "typescript-eslint": "^8.59.1"
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
