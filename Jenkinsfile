@@ -6,7 +6,7 @@ pipeline {
         FRONT_IMAGE_NAME = "ghcr.io/sbush92/portfolio"
         BACK_IMAGE_NAME = "ghcr.io/sbush92/portfolio-backend"
         IMAGE_TAG  = "latest"
-        SERVER     = "jenkins@192.168.86.234"
+        SERVER     = "jenkins@192.168.86.29"
     }
 
     stages {
