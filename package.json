@@ -36,7 +36,7 @@
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.59.1",
     "chance": "^1.1.13",
-    "cypress": "^15.14.2",
+    "cypress": "^15.18.1",
     "eslint": "^10.3.0",
     "globals": "^17.6.0",
     "jsdom": "^29.1.1",
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@ionic-native/in-app-browser": "^5.36.0",
-    "cordova-plugin-inappbrowser": "^6.0.0",
+    "cordova-plugin-inappbrowser": "^6.0.1",
     "pg": "^8.20.0"
   }
 }
