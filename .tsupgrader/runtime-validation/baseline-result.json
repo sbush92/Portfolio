@@ -1,13 +1,13 @@
 {
-  "planHash": "67aa20014b07489752c8c1c0c5e43d0796b9b8332118ba208c4881e2ecadf36b",
+  "planHash": "07f81d22f4fa1c84d01bbaafe60b7bee7f90f4491fc657c288133300d165b413",
   "phase": "baseline",
-  "recordedAtUtc": "2026-11-14T18:13:18.0071946Z",
+  "recordedAtUtc": "2026-11-14T20:13:31.9526060Z",
   "retryCount": 0,
   "resetBaseline": true,
   "complete": true,
   "result": {
     "setupSucceeded": true,
-    "setupDurationMs": 14316,
+    "setupDurationMs": 8174,
     "setupFailureOutput": null,
     "assertions": [
       {
@@ -19,8 +19,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": 0,
-        "outputSample": "\r\n\u003E frontend@0.0.0 build\r\n\u003E tsc -b \u0026\u0026 vite build\r\n\r\n\u001B[36mvite v8.3.8 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\r\n../img/portrait.jpg referenced in ../img/portrait.jpg didn\u0027t resolve at build time, it will remain unchanged to be resolved at runtime\r\n\u2713 474 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndist/index.html                                        0.47 kB \u2502 gzip:   0.30 kB\r\ndist/assets/blog_background-CPq-XHqf.jpg              77.44 kB\r\ndist/assets/home_background-DlQXFawG.jpg             327.46 kB\r\ndist/assets/contact_background-BOZtKVdm.jpg          399.58 kB\r\ndist/assets/about_background-CBF4VIBi.jpg            495.76 kB\r\ndist/assets/work_background-C32Ko89L.jpg             570.10 kB\r\ndist/assets/code_of_conduct_background-Jq6Ymn1Y.jpg  658.62 kB\r\ndist/assets/index-CpjEqfVZ.css                         5.82 kB \u2502 gzip:   2.06 kB\r\ndist/assets/index-BTPRSuzr.js                        437.40 kB \u2502 gzip: 141.30 kB\r\n\r\n\u001B[32m\u2713 built in 251ms\u001B[39m\r\n",
-        "durationMs": 3110
+        "outputSample": "\r\n\u003E frontend@0.0.0 build\r\n\u003E tsc -b \u0026\u0026 vite build\r\n\r\n\u001B[36mvite v8.3.8 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\r\n../img/portrait.jpg referenced in ../img/portrait.jpg didn\u0027t resolve at build time, it will remain unchanged to be resolved at runtime\r\n\u2713 474 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndist/index.html                                        0.47 kB \u2502 gzip:   0.30 kB\r\ndist/assets/blog_background-CPq-XHqf.jpg              77.44 kB\r\ndist/assets/home_background-DlQXFawG.jpg             327.46 kB\r\ndist/assets/contact_background-BOZtKVdm.jpg          399.58 kB\r\ndist/assets/about_background-CBF4VIBi.jpg            495.76 kB\r\ndist/assets/work_background-C32Ko89L.jpg             570.10 kB\r\ndist/assets/code_of_conduct_background-Jq6Ymn1Y.jpg  658.62 kB\r\ndist/assets/index-CpjEqfVZ.css                         5.82 kB \u2502 gzip:   2.06 kB\r\ndist/assets/index-BTPRSuzr.js                        437.40 kB \u2502 gzip: 141.30 kB\r\n\r\n\u001B[32m\u2713 built in 269ms\u001B[39m\r\n",
+        "durationMs": 3173
       },
       {
         "name": "tests-pass",
@@ -31,8 +31,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": 0,
-        "outputSample": "\r\n\u003E portfolio@1.0.0 test\r\n\u003E node --test e2e-spec.js\r\n\r\nTAP version 13\r\n# Subtest: Portfolio Project Tests\r\n    # Subtest: Menu Toggle\r\n        # Subtest: should toggle menu classes on click\r\n        ok 1 - should toggle menu classes on click\r\n          ---\r\n          duration_ms: 88.9654\r\n          type: \u0027test\u0027\r\n          ...\r\n        1..1\r\n    ok 1 - Menu Toggle\r\n      ---\r\n      duration_ms: 89.5861\r\n      type: \u0027suite\u0027\r\n      ...\r\n    # Subtest: Blog Pagination\r\n        # Subtest: should paginate blog posts correctly\r\n        ok 1 - should paginate blog posts correctly\r\n          ---\r\n          duration_ms: 0.1522\r\n          type: \u0027test\u0027\r\n          ...\r\n        1..1\r\n    ok 2 - Blog Pagination\r\n      ---\r\n      duration_ms: 0.2484\r\n      type: \u0027suite\u0027\r\n      ...\r\n    1..2\r\nok 1 - Portfolio Project Tests\r\n  ---\r\n  duration_ms: 90.3795\r\n  type: \u0027suite\u0027\r\n  ...\r\n1..1\r\n# tests 2\r\n# suites 3\r\n# pass 2\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 1657.6592\r\n",
-        "durationMs": 2139,
+        "outputSample": "\r\n\u003E portfolio@1.0.0 test\r\n\u003E node --test e2e-spec.js\r\n\r\nTAP version 13\r\n# Subtest: Portfolio Project Tests\r\n    # Subtest: Menu Toggle\r\n        # Subtest: should toggle menu classes on click\r\n        ok 1 - should toggle menu classes on click\r\n          ---\r\n          duration_ms: 88.6363\r\n          type: \u0027test\u0027\r\n          ...\r\n        1..1\r\n    ok 1 - Menu Toggle\r\n      ---\r\n      duration_ms: 89.2397\r\n      type: \u0027suite\u0027\r\n      ...\r\n    # Subtest: Blog Pagination\r\n        # Subtest: should paginate blog posts correctly\r\n        ok 1 - should paginate blog posts correctly\r\n          ---\r\n          duration_ms: 0.1877\r\n          type: \u0027test\u0027\r\n          ...\r\n        1..1\r\n    ok 2 - Blog Pagination\r\n      ---\r\n      duration_ms: 0.3083\r\n      type: \u0027suite\u0027\r\n      ...\r\n    1..2\r\nok 1 - Portfolio Project Tests\r\n  ---\r\n  duration_ms: 90.0786\r\n  type: \u0027suite\u0027\r\n  ...\r\n1..1\r\n# tests 2\r\n# suites 3\r\n# pass 2\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 1773.88\r\n",
+        "durationMs": 2276,
         "testResults": {
           "testFramework": "unknown",
           "runnerDetectedFrom": "none",
@@ -52,8 +52,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": 0,
-        "outputSample": "TAP version 13\r\n# Subtest: GET /test returns the sample shirt payload\r\nok 1 - GET /test returns the sample shirt payload\r\n  ---\r\n  duration_ms: 45.5982\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: POST /test/:id requires a logo\r\nok 2 - POST /test/:id requires a logo\r\n  ---\r\n  duration_ms: 24.1224\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: GET /blog returns rows from the database client\r\nok 3 - GET /blog returns rows from the database client\r\n  ---\r\n  duration_ms: 6.6779\r\n  type: \u0027test\u0027\r\n  ...\r\n1..3\r\n# tests 3\r\n# suites 0\r\n# pass 3\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 370.4036\r\n",
-        "durationMs": 429,
+        "outputSample": "TAP version 13\r\n# Subtest: GET /test returns the sample shirt payload\r\nok 1 - GET /test returns the sample shirt payload\r\n  ---\r\n  duration_ms: 46.0591\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: POST /test/:id requires a logo\r\nok 2 - POST /test/:id requires a logo\r\n  ---\r\n  duration_ms: 24.4537\r\n  type: \u0027test\u0027\r\n  ...\r\n# Subtest: GET /blog returns rows from the database client\r\nok 3 - GET /blog returns rows from the database client\r\n  ---\r\n  duration_ms: 6.6485\r\n  type: \u0027test\u0027\r\n  ...\r\n1..3\r\n# tests 3\r\n# suites 0\r\n# pass 3\r\n# fail 0\r\n# cancelled 0\r\n# skipped 0\r\n# todo 0\r\n# duration_ms 379.1583\r\n",
+        "durationMs": 442,
         "testResults": {
           "testFramework": "unknown",
           "runnerDetectedFrom": "none",
@@ -65,6 +65,18 @@
         }
       },
       {
+        "name": "playwright-cli-runs",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "Version 1.65.1\r\n",
+        "durationMs": 524
+      },
+      {
         "name": "home-route-http",
         "kind": "http-probe",
         "verificationMethod": "http-status",
@@ -73,8 +85,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": null,
-        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n    \u003Clink rel=\u0022icon\u0022 type=\u0022image/jpeg\u0022 href=\u0022/img/portrait_small.jpg\u0022 /\u003E\r\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\r\n    \u003Ctitle\u003Efrontend\u003C/title\u003E\r\n  \u003C/head\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\r\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.tsx\u0022\u003E\u003C/script\u003E\r\n  \u003C/body\u003E\r\n\u003C/html\u003E\r\n\n--- server output ---\n\r\n\u003E frontend@0.0.0 dev\r\n\u003E vite --host 127.0.0.1 --port 4175\r\n\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v8.3.8\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m197\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m4175\u001B[22m/\u001B[39m\r\n",
-        "durationMs": 1052
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n    \u003Clink rel=\u0022icon\u0022 type=\u0022image/jpeg\u0022 href=\u0022/img/portrait_small.jpg\u0022 /\u003E\r\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\r\n    \u003Ctitle\u003Efrontend\u003C/title\u003E\r\n  \u003C/head\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\r\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.tsx\u0022\u003E\u003C/script\u003E\r\n  \u003C/body\u003E\r\n\u003C/html\u003E\r\n",
+        "durationMs": 15
       }
     ],
     "executions": [
@@ -121,6 +133,18 @@
         "args": [
           "--test",
           "backend/test/app.test.js"
+        ],
+        "cwd": "C:\\Users\\sjbus\\Repo\\Portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "playwright-cli-runs",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "./node_modules/playwright/cli.js",
+          "--version"
         ],
         "cwd": "C:\\Users\\sjbus\\Repo\\Portfolio",
         "env": {},
