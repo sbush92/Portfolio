@@ -1,0 +1,60 @@
+{
+  "generatedOnPlatform": "win32",
+  "projectType": "webapp",
+  "setup": [
+    {
+      "command": "npm",
+      "args": ["install", "--no-package-lock"],
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "frontend-builds",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "build", "--workspace", "frontend"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": ["test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "backend-tests-pass",
+      "kind": "process",
+      "command": "node",
+      "args": ["--test", "backend/test/app.test.js"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "home-route-http",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": [
+        "run",
+        "dev",
+        "--workspace",
+        "frontend",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4175"
+      ],
+      "url": "http://127.0.0.1:4175/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    }
+  ]
+}

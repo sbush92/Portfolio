@@ -1,0 +1,28 @@
+{
+  "planHash": "67aa20014b07489752c8c1c0c5e43d0796b9b8332118ba208c4881e2ecadf36b",
+  "phase": "postupgrade",
+  "recordedAtUtc": "2026-11-14T18:20:54.7019509Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": false,
+    "setupDurationMs": 15570,
+    "setupFailureOutput": "setup step 0 \u0027npm\u0027 failed (exit=-4082, timedOut=False)\r\nnpm error code EBUSY\r\nnpm error syscall copyfile\r\nnpm error path C:\\Users\\sjbus\\Repo\\Portfolio\\node_modules\\@rolldown\\binding-win32-x64-msvc\\rolldown-binding.win32-x64-msvc.node\r\nnpm error dest C:\\Users\\sjbus\\Repo\\Portfolio\\node_modules\\@rolldown\\.binding-win32-x64-msvc-XPrLkN8b\\rolldown-binding.win32-x64-msvc.node\r\nnpm error errno -4082\r\nnpm error EBUSY: resource busy or locked, copyfile \u0027C:\\Users\\sjbus\\Repo\\Portfolio\\node_modules\\@rolldown\\binding-win32-x64-msvc\\rolldown-binding.win32-x64-msvc.node\u0027 -\u003E \u0027C:\\Users\\sjbus\\Repo\\Portfolio\\node_modules\\@rolldown\\.binding-win32-x64-msvc-XPrLkN8b\\rolldown-binding.win32-x64-msvc.node\u0027\r\nnpm error A complete log of this run can be found in: C:\\Users\\sjbus\\AppData\\Local\\npm-cache\\_logs\\2026-11-14T18_20_39_477Z-debug-0.log\r\n",
+    "assertions": [],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "install",
+          "--no-package-lock"
+        ],
+        "cwd": "C:\\Users\\sjbus\\Repo\\Portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
