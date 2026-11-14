@@ -37,6 +37,15 @@
       "timeoutSeconds": 120
     },
     {
+      "name": "playwright-cli-runs",
+      "kind": "process",
+      "command": "node",
+      "args": ["./node_modules/playwright/cli.js", "--version"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 30
+    },
+    {
       "name": "home-route-http",
       "kind": "http-probe",
       "startCommand": "npm",
