@@ -4,6 +4,8 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+permissions:
+  contents: read
 jobs:
   test:
     timeout-minutes: 20
@@ -18,7 +20,7 @@ jobs:
 
     - name: Cache Playwright browsers
       id: pw-cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: ~/.cache/ms-playwright
         key: pw-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
