@@ -22,4 +22,3 @@ updates:
     commit-message:
       prefix: "chore(deps)"
     open-pull-requests-limit: 5
-    versioning-strategy: "increase"
