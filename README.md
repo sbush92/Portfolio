@@ -32,6 +32,11 @@ A modern portfolio application with a React + Vite frontend and a Node/Express b
    npm install
    ```
 
+3. Install workspace dependencies for automated builds:
+   ```sh
+   npm ci
+   ```
+
 This installs the root tooling plus the frontend and backend workspace dependencies.
 
 ### Running Locally
