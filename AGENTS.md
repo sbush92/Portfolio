@@ -17,6 +17,7 @@
 ## Commands
 
 - Install dependencies from the repo root with `npm install`.
+- Install dependencies from repo in automated builds to enforce a clean installation directly from the lockfile without modifying it `npm ci`
 - Start local frontend development from the repo root with `npx vite frontend --config frontend/vite.config.ts`.
 - Build the frontend from the repo root with `npx vite build frontend --config frontend/vite.config.ts`.
 - Preview the production frontend locally with `npx vite preview frontend --config frontend/vite.config.ts`.
